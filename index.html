@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Landing page profesional para promover el Programa de Vehículos Pesados 2026 con formulario conectado a Google Sheets." />
+  <title>Programa Vehículos Pesados 2026 | Consultoría Estratégica ELAM FAW</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+          colors: {
+            brand: {
+              navy: "#0B132B",
+              blue: "#1C2541",
+              teal: "#3A506B",
+              gold: "#D4AF37",
+              light: "#F8F9FA",
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .hero-pattern {
+      background-color: #0b132b;
+      background-image: radial-gradient(circle at center, #1c2541 0%, #0b132b 100%);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-light selection:bg-brand-gold selection:text-white">
+  <nav class="fixed w-full z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-teal/30 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-3">
+          <i class="fa-solid fa-truck-fast text-brand-gold text-3xl"></i>
+          <div>
+            <span class="text-white font-bold text-xl tracking-wider block">ELAM<span class="text-brand-gold">FAW</span></span>
+            <span class="text-gray-400 text-xs tracking-widest uppercase">Consultoría Estratégica</span>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#plan-mexico" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold uppercase tracking-wide">El Plan</a>
+          <a href="#proceso" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold uppercase tracking-wide">Proceso</a>
+          <a href="#contacto" class="bg-brand-gold text-brand-navy px-5 py-2 rounded shadow hover:bg-yellow-500 transition-all text-sm font-bold uppercase tracking-wide">Asesoría Gratuita</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-pattern min-h-screen flex items-center relative overflow-hidden pt-20">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-gold rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-brand-teal rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-left fade-in-up">
+          <div class="inline-block bg-brand-teal/30 border border-brand-teal/50 text-brand-gold px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase mb-6">Programa de Vehículos Pesados - Marzo 2026</div>
+          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-tight mb-6">Deduce hasta el <span class="text-brand-gold">86%</span> de tu Flota.</h1>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl font-light leading-relaxed">Aprovecha el <strong>Plan México</strong> para renovar tu equipo de transporte con camiones ELAM FAW. Acelera tu crecimiento con beneficios fiscales inmediatos.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contacto" class="bg-brand-gold text-brand-navy hover:bg-yellow-500 font-bold py-4 px-8 rounded text-center transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.4)]">Iniciar Diagnóstico Fiscal</a>
+            <a href="#plan-mexico" class="border border-gray-500 text-white hover:border-white hover:bg-white/10 font-semibold py-4 px-8 rounded text-center transition-all duration-300">Conocer los Detalles</a>
+          </div>
+        </div>
+        <div class="hidden lg:block fade-in-up" style="animation-delay: 0.3s;">
+          <div class="relative rounded-2xl overflow-hidden border border-brand-teal/30 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Camión de carga pesado moderno" class="w-full h-[500px] object-cover object-center opacity-90" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="plan-mexico" class="py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Estrategia Nacional</h2>
+          <h3 class="font-serif text-4xl text-brand-navy font-bold mb-6">El Escudo Fiscal para Transportistas (Marzo 2026)</h3>
+          <p class="text-lg text-gray-600">A través del <strong>Programa de Atención Inmediata para la Protección a la Industria de Vehículos Pesados</strong> (anunciado el 26 de marzo de 2026), se potencian los estímulos del Plan México. Esto permite la <strong>deducción en 1 solo año (en lugar de 4)</strong> para la compra de activos fijos, respaldado por un fondo especial de apoyo.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-brand-navy rounded flex items-center justify-center mb-6 text-brand-gold text-2xl shadow-lg"><i class="fa-solid fa-chart-line"></i></div>
+            <h4 class="text-2xl font-bold text-brand-navy mb-4">Deducción a 1 Año</h4>
+            <p class="text-gray-600 mb-4">Deduce un vehículo pesado hasta en un <span class="text-4xl font-black text-brand-gold block mt-2">86%</span></p>
+            <p class="text-sm text-gray-500">Aplicable inmediatamente en la adquisición de tractocamiones, camiones de carga y autobuses nuevos armados en el país.</p>
+          </div>
+
+          <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-brand-teal rounded flex items-center justify-center mb-6 text-brand-gold text-2xl shadow-lg"><i class="fa-solid fa-wallet"></i></div>
+            <h4 class="text-2xl font-bold text-brand-navy mb-4">Bolsa de 2,000 MDP</h4>
+            <p class="text-gray-600 mb-4">Presupuesto inicial para el <span class="text-4xl font-black text-brand-teal block mt-2">Transportista</span></p>
+            <p class="text-sm text-gray-500">Inversión inyectada por la Secretaría de Economía para estimular la compra de unidades nacionales como la línea ELAM FAW.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="py-24 bg-brand-navy text-white relative overflow-hidden">
+      <div class="absolute right-0 top-0 w-1/3 h-full bg-brand-blue skew-x-12 transform origin-top -z-0 opacity-50"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Ejecución Estratégica</h2>
+          <h3 class="font-serif text-4xl font-bold">La Ruta ELAM FAW</h3>
+          <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Te acompañamos desde la validación fiscal hasta que la unidad está generando ingresos en carretera.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8c738759be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+      <div class="absolute inset-0 bg-brand-navy/90"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="glass-card rounded-2xl p-8 md:p-12">
+          <div class="text-center mb-10">
+            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy font-bold mb-4">Capitaliza tu Inversión Hoy</h2>
+            <p class="text-gray-600">Déjanos tus datos. Un consultor experto estructurará tu proyecto para asegurar tu beneficio fiscal con camiones ELAM FAW.</p>
+          </div>
+
+          <form id="leadForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="Nombre" class="block text-sm font-bold text-gray-700 mb-1">Nombre Completo *</label>
+                <input type="text" id="Nombre" name="Nombre" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition-all bg-white/50 backdrop-blur-sm" />
+              </div>
+              <div>
+                <label for="Empresa" class="block text-sm font-bold text-gray-700 mb-1">Nombre de la Empresa</label>
+                <input type="text" id="Empresa" name="Empresa" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition-all bg-white/50 backdrop-blur-sm" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="Email" class="block text-sm font-bold text-gray-700 mb-1">Correo Corporativo *</label>
+                <input type="email" id="Email" name="Email" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition-all bg-white/50 backdrop-blur-sm" />
+              </div>
+              <div>
+                <label for="Telefono" class="block text-sm font-bold text-gray-700 mb-1">Teléfono Directo *</label>
+                <input type="tel" id="Telefono" name="Telefono" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition-all bg-white/50 backdrop-blur-sm" />
+              </div>
+            </div>
+
+            <div>
+              <label for="Mensaje" class="block text-sm font-bold text-gray-700 mb-1">Describe tus necesidades operativas (Opcional)</label>
+              <textarea id="Mensaje" name="Mensaje" rows="3" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition-all bg-white/50 backdrop-blur-sm placeholder-gray-400" placeholder="Ej. Necesito 3 tractocamiones para ruta Bajío-Norte..."></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="w-full bg-brand-navy hover:bg-brand-teal text-white font-bold py-4 px-8 rounded flex justify-center items-center gap-2 transition-all duration-300 shadow-lg">
+              <span>Solicitar Análisis Estratégico</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="text-xs text-center text-gray-500 mt-6 flex items-center justify-center gap-2"><i class="fa-solid fa-lock"></i> Información confidencial. No enviamos spam.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <span class="text-white font-bold text-xl tracking-wider block mb-4">ELAM<span class="text-brand-gold">FAW</span></span>
+          <p class="text-sm">Especialistas en soluciones de transporte de carga y estrategias de inversión fiscal para el crecimiento empresarial en México.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto Directo</h4>
+          <ul class="space-y-2 text-sm">
+            <li><i class="fa-solid fa-user text-brand-gold w-5"></i> Daniel Rivera Ayala</li>
+            <li><i class="fa-solid fa-phone text-brand-gold w-5"></i> 477 580 5988</li>
+            <li><i class="fa-solid fa-envelope text-brand-gold w-5"></i> daniel.rivera@elambajio.com</li>
+            <li><i class="fa-solid fa-globe text-brand-gold w-5"></i> <a href="https://tuconsultor.github.io/HUB-NFC/" target="_blank" class="hover:text-white transition-colors">HUB-NFC</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Aviso Legal</h4>
+          <p class="text-xs leading-relaxed">Este sitio web es de carácter informativo y promocional. No constituye asesoría fiscal formal. Se recomienda consultar directamente con su departamento contable o contador público para la aplicación precisa de los estímulos descritos en el Programa de Vehículos Pesados del Plan México (Marzo 2026).</p>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">&copy; 2026 ELAM FAW Bajío. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/form-handler.js"></script>
+</body>
+</html>
